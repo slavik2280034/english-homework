@@ -46,3 +46,11 @@ button:hover {
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
 }
+
+.red-btn {
+  background-color: red;
+}
+
+.red-btn:hover {
+  background-color: darkred;
+}

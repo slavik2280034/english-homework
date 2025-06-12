@@ -76,3 +76,7 @@ button:hover {
 .red-btn:hover {
   background-color: darkred;
 }
+
+ul, li {
+  color: black;
+}

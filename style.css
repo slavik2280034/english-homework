@@ -60,13 +60,13 @@ button:hover {
 }
 
 .homework {
-  display: inline-block;
-  width: 200px;
-  padding: 20px;
-  margin: 10px;
+  width: 80%;
+  max-width: 800px;
+  padding: 30px;
+  margin: 20px auto;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .red-btn {

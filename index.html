@@ -1,63 +1,124 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8">
-    <title>English-homeworks</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <a href="other.html">
-      <button>????? ????<!--other date--></button>
-    </a>
-    <a href="slovnik.html">
-      <button>???????<!--Словник--></button>
-    </a>
+<head>
+  <meta charset="UTF-8">
+  <title>English-homeworks</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Бургер-кнопка */
+    .burger {
+      width: 30px;
+      cursor: pointer;
+      margin: 20px;
+      z-index: 1001;
+      position: fixed;
+    }
+
+    .burger div {
+      height: 4px;
+      background-color: #333;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    /* Меню */
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #f2f2f2;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .side-menu a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      display: block;
+      color: #333;
+    }
+
+    .side-menu a:hover {
+      background-color: #ddd;
+    }
+
+    /* Головний контент */
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Бургер -->
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Меню -->
+  <div id="sideMenu" class="side-menu">
+    <a href="other.html">Інші дати</a>
+    <a href="slovnik.html">Словник</a>
+    <a href="#">Про сайт</a>
+  </div>
+
+  <!-- Контент -->
+  <div class="content">
     <h1>Website homework</h1>
     <h2>homework ??.??.????</h2>
-    <div class="homework">
-      <!--<h3>homework for this date don`t complete</h3>-->
-      <p>Йде оновлення сайту сайт може не працювати декілька днів!</p>
-      <p>phatal error</p>
+    <p>Йде оновлення сайту — сайт може не працювати декілька днів!</p>
+    <p><i>Fatal error</i></p>
 
-      <h3>Grammar book p 35 Ex 2</h3>
-      <ul>
-        <li>1. e</li>
-        <li>2. c</li>
-        <li>3. a</li>
-        <li>4. f</li>
-        <li>5. b</li>
-        <li>6. d</li>
-      </ul>
-      
-      <h3>Grammar book p 35 Ex 4</h3>
-      <ul>
-        <li>1. wood.</li>
-        <li>2. transfer the items(transfer взято з гугл перекладача).</li>
-        <li>3. wash a dish.</li>
-        <li>4. cotton.</li>
-        <li>5. wool.</li>
-        <li>6. draw.</li>
-      </ul>
+    <h3>Grammar book p 35 Ex 2</h3>
+    <ul>
+      <li>1. e</li>
+      <li>2. c</li>
+      <li>3. a</li>
+      <li>4. f</li>
+      <li>5. b</li>
+      <li>6. d</li>
+    </ul>
 
-      <h3>Grammar book p 36 Ex 1</h3>
-      <ul>
-        <li>6. Tom`s badge is made of gold.</li>
-        <li>7. Ana`s cat is called Sheriff.</li>
-        <li>8. Hasan`s jacket is in the wardrobe.</li>
-      </ul>
-      <!--<h3>Grammar book p 48 Ex 1</h3>
-      <ul>
-        <li>2. </li>
-        <li>3. </li>
-        <li>4. </li>
-        <li>5. </li>
-        <li>6. </li>
-        <li>7. </li>
-        <li>8. </li>
-      </ul>-->
-    </div>
-    <!--<h1>Please rate the style of this site.</h1>
-    <iframe src="https://forms.gle/F7R9Gj2Mu3pAZhWu7" width="1000" height="1500"</iframe>-->
-    <!--<script src="index.js"></script>-->
-  </body>
+    <h3>Grammar book p 35 Ex 4</h3>
+    <ul>
+      <li>1. wood.</li>
+      <li>2. transfer the items.</li>
+      <li>3. wash a dish.</li>
+      <li>4. cotton.</li>
+      <li>5. wool.</li>
+      <li>6. draw.</li>
+    </ul>
+
+    <h3>Grammar book p 36 Ex 1</h3>
+    <ul>
+      <li>6. Tom`s badge is made of gold.</li>
+      <li>7. Ana`s cat is called Sheriff.</li>
+      <li>8. Hasan`s jacket is in the wardrobe.</li>
+    </ul>
+  </div>
+
+  <!-- Скрипт -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      if (menu.style.width === "200px") {
+        menu.style.width = "0";
+      } else {
+        menu.style.width = "200px";
+      }
+    }
+  </script>
+
+</body>
 </html>

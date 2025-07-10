@@ -80,8 +80,137 @@
     <!--<p>Йде оновлення сайту — сайт може не працювати декілька днів!</p>-->
     <!--<p><i>Fatal error</i></p>-->
 
+    <h3>WB. p.61 ex. 1</h3>
+    <ul>
+      <li>1. Amelia's</li>
+      <li>2. sheriffs'</li>
+      <li>3. cowboys'</li>
+      <li>4. John's </li>
+      <li>5. robbers'</li>
+      <li>6. sister's </li>
+    </ul>
+
+    <h3>WB. p.61 ex. 2</h3>
+    <ul>
+      <li>2. Jack`s bike is broken.</li>
+      <li>3. Mary`s cat is called Snowshoe.</li>
+      <li>4. The children` favourite card game is called Uno.</li>
+      <li>5. My friend`s wizard Race is their favourite computer game.</li>
+      <li>6. My grandparents` water in their swimming pool is very cold.</li>
+    </ul>
   </div>
 
+  <iframe width="914" height="514" src="https://www.youtube.com/embed/rKROIpEZO_8" title="Moana | The Heart of Te Fiti (1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <h1>mini test</h1>
+
+  <h3><i>Fatal error</i></h3>
+
+  <form id="quizForm">
+    <div class="question">
+      <p>1. who is the girld</p>
+      <input type="radio" name="q1" value=""> <br>
+      <input type="radio" name="q1" value=""> <br>
+      <input type="radio" name="q1" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>2. </p>
+      <input type="radio" name="q2" value=""> <br>
+      <input type="radio" name="q2" value=""> <br>
+      <input type="radio" name="q2" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>3. </p>
+      <input type="radio" name="q3" value=""> <br>
+      <input type="radio" name="q3" value=""> <br>
+      <input type="radio" name="q3" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>4. </p>
+      <input type="radio" name="q4" value=""> <br>
+      <input type="radio" name="q4" value=""> <br>
+      <input type="radio" name="q4" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>5. </p>
+      <input type="radio" name="q5" value=""> <br>
+      <input type="radio" name="q5" value=""> <br>
+      <input type="radio" name="q5" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>6. </p>
+      <input type="radio" name="q6" value=""> <br>
+      <input type="radio" name="q6" value=""> <br>
+      <input type="radio" name="q6" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>7. </p>
+      <input type="radio" name="q7" value=""> <br>
+      <input type="radio" name="q7" value=""> <br>
+      <input type="radio" name="q7" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>8. </p>
+      <input type="radio" name="q8" value=""> <br>
+      <input type="radio" name="q8" value=""> <br>
+      <input type="radio" name="q8" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>9. </p>
+      <input type="radio" name="q9" value=""> <br>
+      <input type="radio" name="q9" value=""> <br>
+      <input type="radio" name="q9" value=""> <br>
+    </div>
+
+    <div class="question">
+      <p>10. </p>
+      <input type="radio" name="q10" value=""> <br>
+      <input type="radio" name="q10" value=""> <br>
+      <input type="radio" name="q10" value=""> <br>
+    </div>
+
+    <button type="button" onclick="checkQuiz()">Перевірити</button>
+  </form>
+
+  <h2 id="result"></h2>
+
+  <script>
+    function checkQuiz() {
+      const correctAnswers = {
+        q1: "",
+        q2: "",
+        q3: "",
+        q4: "",
+        q5: "",
+        q6: "",
+        q7: "",
+        q8: "",
+        q9: "",
+        q10: ""
+      };
+
+      let score = 0;
+      for (let key in correctAnswers) {
+        const radios = document.getElementsByName(key);
+        for (let r of radios) {
+          if (r.checked && r.value === correctAnswers[key]) {
+            score++;
+          }
+        }
+      }
+
+      document.getElementById("result").textContent = `Результат: ${score} з 10`;
+    }
+  </script>
+  
   <!-- Скрипт -->
   <script>
     function toggleMenu() {
